@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import babyNames from './babyNames';
+import DisplayBabyNames from './DisplayBabyNames';
 
-function App() {
-  return (
+
+
+
+function App(){
+  const [typedValue,setTypedValue]= useState("");
+
+  const handelEvent = (input) => {
+    let typed = input.target.value.toLowerCase();
+    setTypedValue(typed)
+  }
+
+    return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <input onChange={handelEvent} className="search" type="text" placeholder="search"></input>
+        <DisplayBabyNames babyNames={babyNames} typedValue={typedValue} />
     </div>
   );
 }

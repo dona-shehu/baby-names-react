@@ -1,11 +1,41 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search{
+  margin-bottom: 50px;
+  padding:2px;
+  width: 200px;
+  height: 35px;
+  border-radius: 5px;
+  border: 2px solid gray;
 }
+
+.babyName-container{
+    margin: 100px;
+    padding: 50px;
+    border: 3px solid pink;
+    border-radius: 10px;
+}
+
+.boy{
+  background-color:rgb(143, 207, 228);
+  color:blue;
+  font-weight:bold;
+  padding:5px;
+}
+
+.girl{
+  background-color: rgb(253 222 250);
+  color:purple;
+  font-weight:bold;
+  padding: 5px;
+}
+
+.button{
+  border-radius: 5px;
+  margin: 2px;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
