@@ -11,7 +11,6 @@ const DisplayBabyNames = (props) =>{
     
     return (
             <div className="babyName-container">
-                <SearchBar />
                 {filtered.sort((a,b)=> a.name.localeCompare(b.name))
                 .map((baby) => {
                     if(baby.sex === "m"){
